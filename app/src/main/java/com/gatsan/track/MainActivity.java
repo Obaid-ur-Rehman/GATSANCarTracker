@@ -1,5 +1,6 @@
 package com.gatsan.track;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -27,13 +28,17 @@ public class MainActivity extends AppCompatActivity {
     Drawer result;
     Toolbar toolbar;
     AHBottomNavigation bottomNavigation;
-
+    String userInfo;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        toolbar = (Toolbar) findViewById(R.id.toolbar);
 
+        Intent intent = getIntent();
+        userInfo = intent.getStringExtra("key");
+
+
+        toolbar = (Toolbar) findViewById(R.id.toolbar);
 
         getSupportFragmentManager().beginTransaction().replace(R.id.crossfade_content, new TrackingFragment()).commit();
         loadDrawer(savedInstanceState);

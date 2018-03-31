@@ -5,9 +5,75 @@
     tools:context="com.gatsan.track.Fragment.Information">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginEnd="28dp"
+            android:layout_marginTop="202dp"
+            android:layout_toStartOf="@+id/tvName"
+            android:text="Name:" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/textView4"
+            android:layout_below="@+id/textView4"
+            android:text="Email" />
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/textView5"
+            android:layout_below="@+id/textView5"
+            android:text="Expiry" />
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/textView6"
+            android:layout_below="@+id/textView6"
+            android:text="Phone" />
+
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/textView4"
+            android:layout_centerHorizontal="true"
+            android:text="TextView" />
+
+        <TextView
+            android:id="@+id/tvEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/textView6"
+            android:layout_alignStart="@+id/tvName"
+            android:text="TextView" />
+
+        <TextView
+            android:id="@+id/tvExpiry"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/tvPhone"
+            android:layout_alignStart="@+id/tvEmail"
+            android:text="TextView" />
+
+        <TextView
+            android:id="@+id/tvPhone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/textView7"
+            android:layout_alignEnd="@+id/tvExpiry"
+            android:text="TextView" />
+    </RelativeLayout>
 </FrameLayout>
